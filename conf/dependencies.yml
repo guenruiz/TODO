@@ -1,0 +1,7 @@
+# Application dependencies
+
+require:
+    - play
+    - play -> morphia 1.2.12
+    - play -> sass 1.1
+    - net.sf.flexjson -> flexjson 2.1
