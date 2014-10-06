@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es" >
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
@@ -8,12 +8,16 @@
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
     </head>
-    <body>
-        #{doLayout /}
+    <body ng-app="TodoApp">
         
-        <script src="@{'/public/javascripts/lib/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{doLayout /}
+
+        <script src="@{'/public/javascripts/lib/jquery-1.11.1.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         <script src="@{'/public/javascripts/lib/angular.min.js'}"></script>
         <script src="@{'/public/javascripts/lib/angular_resource.min.js'}"></script>
+        <script src="@{'/public/javascripts/app/app.js'}"></script>
+        <script src="@{'/public/javascripts/app/services.js'}"></script>
+        <script src="@{'/public/javascripts/app/controllers.js'}"></script>
         #{get 'moreScripts' /}
     </body>
 </html>

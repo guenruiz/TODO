@@ -5,7 +5,10 @@
 # Home page
 GET     /                                       Application.index
 GET     /prueba                                 Application.datosPrueba
-GET     /json/listas.json                        Listas.list
+GET     /listas/?{id}?                          Listas.list
+GET     /json/listas.json/?{id}?                Listas.listJSON
+GET     /json/todos.json/?{id}?                 Listas.todosByListJSON
+POST    /json/todos.json/?{id}?                 Listas.saveTodoList
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
